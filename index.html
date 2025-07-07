@@ -21,7 +21,7 @@
                   <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                   <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                   <!--                        <li class="nav__item"><a href="#work" class="nav__link">Portfolio</a></li>-->
-                  <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+                  <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
                   <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                </ul>
             </div>
@@ -38,7 +38,7 @@
                <p>🔍 Turning data into actionable insights</p>
                <br/>
                <a href="mailto:gunalofficialid@gmail.com" class="button">Hire me</a>
-               <a href="assets/Gunal_D_Resume.pdf" class="btn resume-btn" target="_blank" download>
+               <a href="Gunal_Resume.pdf" class="btn resume-btn" target="_blank" download>
                📄 View Resume
                </a>
             </div>
@@ -64,7 +64,7 @@
          </section>
          <!--===== ABOUT =====-->
          <section class="about section " id="about" style=" background-color: white; ">
-            <h2 class="section-title">🙋‍♂️ About me</h2>
+            <h2 class="section-title">🙋‍♂️ About</h2>
             <div class="about__container bd-grid">
                <div class="about__img">
                   <img src="assets/imgs/data-scientist.jpg" alt="" style="width: auto">
@@ -80,51 +80,112 @@
                </div>
             </div>
          </section>
+         
+         
+ 
          <!--===== SKILLS =====-->
          <section class="skills section" id="skills">
             <h2 class="section-title">🛠️ Skills</h2>
             <div class="skills__container bd-grid">
                <div>
-                  <h2 class="skills__subtitle">Profesional Skills</h2>
-                  <p class="skills__text">Take a look at some of the things I love working on. </p>
+                  <h2 class="skills__subtitle" style="font-size: 20px;">Professional Skills</h2>
+                  <p class="skills__text">Explore the core skills that empower me as a Data Scientist.</p>
+
+                  <!-- Programming Languages -->
                   <div class="skills__data">
                      <div class="skills__names">
-                        <img src="assets/imgs/programming-logo.jpg"  width="30" height="40" />&nbsp;
+                        <img src="assets/imgs/programming-logo.jpg" width="30" height="40" />&nbsp;
                         <span class="skills__name">Programming Languages : &nbsp;</span>
                         <div class="bd-grids">
-                           <img src="assets/imgs/python-logo.jpeg" alt="skills" width="50"  style="padding: 5px 10px"/>
-                           <img src="assets/imgs/html-logo.png" alt="skills"width="50"  style="padding: 5px 10px"/>
-                           <img src="assets/imgs/css-logo.svg" alt="skills" width="50"  style="padding: 5px 10px"/>
+                           <img src="assets/logos/python-logo.png" class="skills-img"/>
+                           <!-- <img src="assets/logos/r-logo.png" alt="skills" width="50" style="padding: 5px 10px" /> -->
+                           <img src="assets/logos/sql-logo.png" class="skills-img"/>
                         </div>
                      </div>
                   </div>
+
+                  <!-- Data Manipulation -->
                   <div class="skills__data">
                      <div class="skills__names">
-                        <img src="assets/imgs/data-visualization.png"  width="30" height="40" />&nbsp;
+                        <img src="assets/imgs/data-wrangling.webp" width="30" height="40" />&nbsp;
+                        <span class="skills__name">Data Manipulation & Analysis : &nbsp;</span>
+                        <img src="assets/logos/pandas.png" class="skills-img"/>
+                        <img src="assets/logos/numpy.png" class="skills-img"/>
+                        <!-- <img src="assets/logos/excel-logo.png" alt="skills" width="50" style="padding: 10px 10px" /> -->
+                     </div>
+                  </div>
+
+                  <!-- Data Visualization -->
+                  <div class="skills__data">
+                     <div class="skills__names">
+                        <img src="assets/imgs/data-visualization.png" width="30" height="40" />&nbsp;
                         <span class="skills__name">Data Visualization : &nbsp;</span>
-                        <img src="assets/imgs/seaborn-logo.svg" alt="skills" width="100"  style="padding: 10px 10px"/>
-                        <img src="assets/imgs/matplotlib-logo.svg" alt="skills" width="100"  style="padding: 10px 10px"/>
+                        <img src="assets/logos/matplotlib-logo.png" class="skills-img"/>
+                        <img src="assets/logos/seaborn-logo.png" class="skills-img"/>
+                        <img src="assets/logos/plotly-logo.png" class="skills-img"/>
+                        <!-- <img src="assets/logos/tableau-logo.png" alt="skills" width="70" style="padding: 10px 10px" /> -->
                      </div>
                   </div>
+
+                  <!-- Machine Learning -->
                   <div class="skills__data">
                      <div class="skills__names">
-                        <img src="assets/imgs/database-logo.jpg"  width="30" height="40" />&nbsp;
-                        <span class="skills__name">Database Technology : &nbsp;</span>
-                        <img src="assets/imgs/mysql-logo.svg" alt="skills"  width="80"  style="padding: 0px 10px"/>
-                        <img src="assets/imgs/mongodb-logo.png" alt="skills" width="100"  style="padding: 0px 10px"/>
+                        <img src="assets/imgs/ML-logo.svg" width="30" height="40" />&nbsp;
+                        <span class="skills__name">Machine Learning Libraries : &nbsp;</span>
+                        <img src="assets/logos/Scikit_learn_logo.png" class="skills-img"/>
+                        <img src="assets/logos/xgboost-logo.png" class="skills-img"/>
+                        <img src="assets/logos/lightgbm-logo.png" class="skills-img"/>
                      </div>
                   </div>
+
+                  <!-- Deep Learning -->
                   <div class="skills__data">
                      <div class="skills__names">
-                        <img src="assets/imgs/ML-logo.svg"  width="30" height="40" />&nbsp;
-                        <span class="skills__name">ML Libraries : &nbsp;</span>
-                        <img src="assets/imgs/pandas.png" alt="skills"  width="90"  style="padding: 5px 10px;"/>
-                        <img src="assets/imgs/numpy.png" alt="skills" width="60" style="padding: 5px 10px;"/>
-                        <img src="assets/imgs/Scikit_learn_logo.png" alt="skills" width="80" style="padding: 5px 10px;"/>
+                        <img src="assets/imgs/deep-learning-logo.jpg" width="30" height="40" />&nbsp;
+                        <span class="skills__name">Deep Learning : &nbsp;</span>
+                        <img src="assets/logos/tensorflow-logo.png" class="skills-img"/>
+                        <img src="assets/logos/keras-logo.png" class="skills-img"/>
+                        <img src="assets/logos/pytorch-logo.png" class="skills-img"/>
+                     </div>
+                  </div>
+
+                  <!-- Databases -->
+                  <div class="skills__data">
+                     <div class="skills__names">
+                        <img src="assets/imgs/database-logo.jpg" width="30" height="40" />&nbsp;
+                        <span class="skills__name">Databases : &nbsp;</span>
+                        <img src="assets/logos/mysql-logo.png" class="skills-img"/>
+                        <img src="assets/logos/mongodb-logo.png" class="skills-img"/>
+                        <img src="assets/logos/postgresql-logo.png" class="skills-img"/>
+                     </div>
+                  </div>
+
+                  <!-- Big Data & Cloud -->
+                  <div class="skills__data">
+                     <div class="skills__names">
+                        <img src="assets/imgs/cloud-logo.png" width="30" height="40" />&nbsp;
+                        <span class="skills__name">Big Data & Cloud : &nbsp;</span>
+                        <img src="assets/logos/aws-logo.png" class="skills-img"/>
+                        <img src="assets/logos/spark-logo.png" class="skills-img"/>
+                        <img src="assets/logos/hadoop-logo.png" class="skills-img"/>
+                     </div>
+                  </div>
+
+                  <!-- Tools -->
+                  <div class="skills__data">
+                     <div class="skills__names">
+                        <img src="assets/imgs/tools-logo.jpg" width="30" height="40" />&nbsp;
+                        <span class="skills__name">Tools & Deployment : &nbsp;</span>
+                        <img src="assets/logos/git-logo.png" class="skills-img"/>
+                        <img src="assets/logos/docker-logo.png" class="skills-img"/>
+                        <img src="assets/logos/streamlit-logo.png" class="skills-img"/>
+                        <img src="assets/logos/flask-logo.png" class="skills-img"/>
                      </div>
                   </div>
                </div>
-               <div>              
+
+               <!-- Right Banner Image -->
+               <div style=" display: flex; flex-direction: column; flex-wrap: nowrap; align-items: center; ">
                   <img src="assets/imgs/data-scientist-banner.avif" alt="" class="skills__img">
                </div>
             </div>
@@ -135,7 +196,7 @@
          <!-- Project Showcase Section -->
          <!--===== WORK =====-->
          <section class="work section" id="work">
-            <h2 class="section-title">📁 My Projects</h2>
+            <h2 class="section-title">📁 Projects</h2>
             <div class="work__container bd-grid">
                <!-- Project Card 1 -->
                <a href="#!" class="work__img" onclick="openModal('modal-clv')">
@@ -244,9 +305,9 @@
 
 
          <!-----------------Certificates------------------->
-         <div class="container" id="blog">
-            <section class="work section" id="work">
-            <h2 class="section-title" id="blog">🎓 Certifications</h2>
+         <div class="container" id="certifications">
+            <section class="work section" id="#certifications">
+            <h2 class="section-title" id="certifications">🎓 Certifications</h2>
             <div class="grid">
                <div class="card">
                   <div class="card_img">
@@ -288,9 +349,9 @@
       <footer class="footer" id="contact">
          <p class="footer__title signature">Gunal D</p>
          <div class="footer__social">
-            <a href="#" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
-            <a href="#" class="footer__icon"><i class='bx bxl-medium-square' ></i></a>
-            <a href="#" class="footer__icon"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.linkedin.com/in/gunal-d" class="footer__icon"><i class='bx bxl-linkedin' target="_blank"></i></a>
+            <a href="https://medium.com/@gunal-d" class="footer__icon"><i class='bx bxl-medium-square' target="_blank"></i></a>
+            <a href="https://github.com/gunal-official/" class="footer__icon"><i class='bx bxl-github' target="_blank"></i></a>
          </div>
          <p class="footer__copy">&#169;2025 Gunal D. All rights reserved.</p>
       </footer>

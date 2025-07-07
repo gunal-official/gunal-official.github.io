@@ -46,13 +46,15 @@ html {
 
 body {
   margin: var(--header-height) 0 0 0;
-  font-family: var(--body-font);
+  font-family: monospace;
   font-size: var(--normal-font-size);
   color: var(--second-color);
 }
 
 h1, h2, p {
   margin: 0;
+      line-height: 1.6;
+    font-size: 13px;
 }
 
 ul {
@@ -70,6 +72,22 @@ img {
   height: auto;
   display: block;
 }
+img.skils-img {
+    width: 20%;
+}
+.bd-grids {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+.signature {
+  font-family: cursive;
+}
+
+
 
 /*===== CLASS CSS ===== */
 .section-title {
@@ -578,12 +596,10 @@ work__container bd-grid{
 }
 
 .card_title {
-    font-family: 'Merriweather',
-        serif;
+    font-family: monospace;
     font-weight: 900;
     text-transform: capitalize;
-
-    font-size: 26px;
+    font-size: 16px !important;
     padding-bottom: 20px;
 }
 
@@ -724,4 +740,84 @@ a.read_more:hover {
         margin-top: 20px;
     }
 
+}
+
+
+
+
+
+/* Modal container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8); /* Black with opacity */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Close button (X) */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+  from {transform: translateY(-20px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* Optional: modal text styling */
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.modal-content p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.modal-content ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  color: #444;
+}
+
+.modal-content a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
 }

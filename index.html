@@ -1,293 +1,965 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  
+  <title>Gunal D | Data Scientist & Machine Learning Engineer</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Portfolio of Gunal D — Data Scientist, Machine Learning Engineer, and former Web Developer. Specialized in Agentic RAG, predictive modeling, econometric pricing, and full-stack data applications." />
+  <meta name="keywords" content="Gunal D, Data Scientist, Machine Learning Engineer, AI Engineer, Agentic RAG, Python, Bangalore, Pixselo Technologies, Jain University, Portfolio" />
+  <meta name="author" content="Gunal D" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gunal-official.github.io" />
+  <meta property="og:title" content="Gunal D | Data Scientist & Machine Learning Engineer" />
+  <meta property="og:description" content="Explore machine learning projects, production RAG pipelines, data analytics dashboards, and professional experience by Gunal D." />
+  <meta property="og:image" content="./assets/gunal-pic.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gunal D | Data Scientist & ML Engineer" />
+  <meta name="twitter:description" content="Portfolio of Gunal D: Machine Learning, Generative AI, Data Analytics, and Web Engineering." />
+  <meta name="twitter:image" content="./assets/gunal-pic.png" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
-  <nav id="desktop-nav">
-    <div class="logo">Gunal D</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <!-- Ambient Glow Orbs -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- SITE HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Gunal D Portfolio Home">
+        <div class="logo-badge">GD</div>
+        <div>
+          <span>Gunal D</span>
+          <span class="logo-role">Data Scientist</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="desktop-nav">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Journey</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark and Light theme" title="Toggle Theme">
+          <!-- Sun Icon (shown in light mode) -->
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in dark mode) -->
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">Let's Talk</a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Journey & Experience</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Technical Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Featured Projects</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact Info</a></li>
       </ul>
     </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Gunal D</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-  </nav>
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/gunal-pic.png" alt="Gunal D profile picture" />
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Gunal D</h1>
-      <p class="section__text__p2">Data Scientist</p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/gunal-cv.pdf')">
-          Download CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
-      </div>
-      <div id="socials-container">
-        <a href="https://www.linkedin.com/in/gunal-d/" target="_blank">
-          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" /></a>
-        <a href="https://github.com/gunal-official" target="_blank">
-          <img src="./assets/github.png" alt="My Github profile" class="icon" /></a>
-      </div>
-    </div>
-  </section>
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Experience</h3>
-            <p>2+ years <br />Web Developer</p>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Column -->
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="status-dot"></span>
+              <span>Available for Data Science & AI Opportunities</span>
+            </div>
+            
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Gunal D</h1>
+            
+            <div class="hero-role-wrapper">
+              <span>I build</span>
+              <span id="typing-text" class="typing-text">Data Science Solutions</span>
+            </div>
+
+            <p class="hero-bio">
+              Data Scientist & Machine Learning Engineer with 2+ years of prior professional web development experience. Specializing in Agentic RAG pipelines, predictive modeling, econometric optimization, and production data applications.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Projects</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+              </a>
+              <a href="./assets/gunal-cv.pdf" download="Gunal_D_Resume.pdf" class="btn btn-secondary" target="_blank">
+                <span>Download CV</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <span>Contact Info</span>
+              </a>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div class="social-strip">
+              <a href="https://www.linkedin.com/in/gunal-d/" target="_blank" rel="noreferrer" class="social-link" title="LinkedIn Profile" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://github.com/gunal-official" target="_blank" rel="noreferrer" class="social-link" title="GitHub Profile" aria-label="GitHub">
+                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="mailto:gunalofficialid@gmail.com" class="social-link" title="Email Gunal" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+              <a href="tel:+918111044810" class="social-link" title="Call Gunal" aria-label="Phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </a>
+            </div>
           </div>
-          <div class="details-container">
-            <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
-            <p>Diploma - CSE.<br />B.Tech - CSE.</p>
+
+          <!-- Visual Column -->
+          <div class="hero-visual-wrapper">
+            <div class="avatar-halo"></div>
+            <div class="avatar-container">
+              <img src="./assets/gunal-pic.png" alt="Gunal D portrait photo" class="avatar-img" />
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-badge badge-top">
+              <span>🤖</span>
+              <span>Agentic RAG & LLMs</span>
+            </div>
+            <div class="floating-badge badge-bottom">
+              <span>📈</span>
+              <span>Predictive ML Modeling</span>
+            </div>
           </div>
         </div>
-        <div class="text-container">
-          <p>
-            Hi 👋, I’m Gunal, I’m a final-year B.Tech Computer Science Engineering student at Jain University with a
-            strong passion for
-            data science, machine learning, and cloud computing. Over the past few years, I’ve built a solid foundation
-            in Python, statistics, and data visualization, and I’ve applied these skills to hands-on projects in
-            predictive modeling, analytics dashboards, and machine learning.
+
+        <!-- Stats Bar -->
+        <div class="hero-stats-banner">
+          <div class="stat-item">
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Years Web Dev Exp</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Data & AI Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Industry Certifications</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">7.5</div>
+            <div class="stat-label">B.Tech CGPA (Jain Univ)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Bridging Software Engineering with <span class="gradient-text">Applied Data Science</span></h2>
+          <p class="section-description">
+            Combining full-stack engineering discipline with mathematical foundations in statistics, predictive modeling, and deep learning.
           </p>
         </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-  </section>
-  <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Technical Skills</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Python</h3>
-                <p>Experienced</p>
+
+        <div class="about-grid">
+          <!-- Image Column -->
+          <div class="about-image-card">
+            <div class="about-img-frame">
+              <img src="./assets/about-pic.png" alt="Gunal D working" class="about-img" />
+            </div>
+            <div class="experience-tag-card">
+              <span class="exp-years">2+</span>
+              <div class="exp-desc">
+                Years Professional<br />Developer Experience
               </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>SQL</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Pandas</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Numpy</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Matplotlib</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Seaborn</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>ML Skills</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Tensorflow</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
+            </div>
           </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Soft Skills</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Problem-solving</h3>
-                <p>Experienced</p>
+
+          <!-- Narrative Column -->
+          <div class="about-narrative">
+            <p class="about-p">
+              Hi, I’m <strong>Gunal D</strong>. I’m a final-year B.Tech Computer Science Engineering student at <strong>Jain (Deemed-to-be University)</strong> in Bangalore, with a strong professional background in web technologies and a dedicated focus on <strong>Data Science, Machine Learning, and Generative AI</strong>.
+            </p>
+            <p class="about-p">
+              Before pivoting full-time into data science, I spent over two years as a <strong>Web Developer at Pixselo Technologies</strong>, architecting scalable UIs, managing MySQL databases, and tuning web performance. This real-world engineering discipline allows me to build ML models that don’t just live in Jupyter Notebooks—they integrate seamlessly into fast, production-ready web platforms.
+            </p>
+
+            <!-- 4 Pillar Cards -->
+            <div class="about-pillars-grid">
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <h3 class="pillar-title">Predictive ML & Stats</h3>
+                <p class="pillar-text">XGBoost, Scikit-learn, clustering, hypothesis testing, and econometric price modeling.</p>
               </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Analytical thinking</h3>
-                <p>Intermediate</p>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 4a6 6 0 0 0-6 6c0 3.314 2.686 6 6 6s6-2.686 6-6a6 6 0 0 0-6-6z"></path></svg>
+                </div>
+                <h3 class="pillar-title">Generative AI & RAG</h3>
+                <p class="pillar-text">Multi-PDF document QA with LangChain, Groq LLaMA 3, vector databases, and vision LLMs.</p>
               </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Data storytelling</h3>
-                <p>Intermediate</p>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h3 class="pillar-title">Full-Stack Deployments</h3>
+                <p class="pillar-text">Turning analytical findings into interactive Streamlit apps, REST APIs, and responsive dashboards.</p>
               </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Communication</h3>
-                <p>Intermediate</p>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <h3 class="pillar-title">Business Intelligence</h3>
+                <p class="pillar-text">RFM cohort segmentation, CLV forecasting, risk-return profiling, and actionable data storytelling.</p>
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-  </section>
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+    </section>
+
+    <!-- EXPERIENCE & JOURNEY TIMELINE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career & Academics</span>
+          <h2 class="section-title">My Professional <span class="gradient-text">Journey & Education</span></h2>
+          <p class="section-description">
+            A track record of production software engineering combined with rigorous academic computer science training.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="timeline-tabs">
+          <button class="timeline-tab-btn active" data-tab="all">All Journey</button>
+          <button class="timeline-tab-btn" data-tab="work">Work Experience</button>
+          <button class="timeline-tab-btn" data-tab="education">Education</button>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="timeline-container">
+          <!-- Timeline Item 1: Jain University B.Tech -->
+          <div class="timeline-item" data-type="education">
+            <div class="timeline-bullet"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">B.Tech in Computer Science & Engineering</h3>
+                  <div class="timeline-company">
+                    <span>Jain (Deemed-to-be University)</span>
+                    <span>• Bangalore, Karnataka</span>
+                  </div>
+                </div>
+                <div class="timeline-date">Oct 2023 — July 2026</div>
+              </div>
+              <div class="timeline-body">
+                <p><strong>Academic Performance: CGPA 7.50 / 10.00</strong></p>
+                <ul class="timeline-list">
+                  <li>Specializing in Data Science, Machine Learning, Applied Statistics, and Cloud Computing.</li>
+                  <li>Engaged in hands-on research and prototyping in Agentic RAG, recommendation algorithms, and econometric modeling.</li>
+                  <li>Relevant Coursework: Data Structures & Algorithms, Machine Learning, Database Management Systems, Linear Algebra, Probability & Statistics.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tech-tag">Data Science</span>
+                  <span class="tech-tag">Machine Learning</span>
+                  <span class="tech-tag">Deep Learning</span>
+                  <span class="tech-tag">Cloud Computing</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <h2 class="experience-sub-title project-title">Project One</h2>
-          <div class="btn-container">
-            <a href="https://github.com/gunal-official/UPI-Transaction-Amount-Recommendation-System-Using-User-Transaction-Patterns"
-              target="_blank">
-              <button class="btn btn-color-2 project-btn">
-                Github
+
+          <!-- Timeline Item 2: Pixselo Technologies Web Developer -->
+          <div class="timeline-item" data-type="work">
+            <div class="timeline-bullet"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Web Developer</h3>
+                  <div class="timeline-company">
+                    <span>Pixselo Technologies Private Limited</span>
+                    <span>• Bangalore, India</span>
+                  </div>
+                </div>
+                <div class="timeline-date">Oct 2021 — Sep 2023 (2 Years)</div>
+              </div>
+              <div class="timeline-body">
+                <ul class="timeline-list">
+                  <li>Engineered and deployed responsive, interactive web applications using HTML5, CSS3, JavaScript (ES6+), Bootstrap, and React.js.</li>
+                  <li>Collaborated with design teams and backend engineers to build mobile-first UIs complying with modern WCAG UX standards.</li>
+                  <li>Developed database queries and backend data endpoints using PHP and MySQL, improving system performance and data integrity.</li>
+                  <li>Performed comprehensive performance audits using Google PageSpeed Insights and Lighthouse, speeding up load times by ~40%.</li>
+                  <li>Managed deployments and production environments across cPanel, AWS EC2/S3, and Hostinger.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">JavaScript ES6+</span>
+                  <span class="tech-tag">PHP & MySQL</span>
+                  <span class="tech-tag">AWS & cPanel</span>
+                  <span class="tech-tag">Lighthouse SEO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Diploma CSE -->
+          <div class="timeline-item" data-type="education">
+            <div class="timeline-bullet"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Diploma in Computer Science & Engineering</h3>
+                  <div class="timeline-company">
+                    <span>Guru Raagavindra Polytechnic College</span>
+                    <span>• Karnataka, India</span>
+                  </div>
+                </div>
+                <div class="timeline-date">Oct 2017 — July 2019</div>
+              </div>
+              <div class="timeline-body">
+                <p><strong>Academic Distinction: 79% (First Class with Distinction)</strong></p>
+                <ul class="timeline-list">
+                  <li>Built solid foundation in object-oriented programming, algorithm analysis, relational database design, and computer architecture.</li>
+                  <li>Graduated with first class distinction, leading multiple student project presentations.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tech-tag">C / C++</span>
+                  <span class="tech-tag">Data Structures</span>
+                  <span class="tech-tag">RDBMS</span>
+                  <span class="tech-tag">Computer Networks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills & Toolstack</span></h2>
+          <p class="section-description">
+            A comprehensive overview of programming languages, machine learning frameworks, data tools, and cloud platforms I leverage.
+          </p>
+        </div>
+
+        <!-- Filter navigation -->
+        <div class="skills-filter-nav">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="ml">ML & GenAI</button>
+          <button class="filter-btn" data-filter="data">Data Analysis & Stats</button>
+          <button class="filter-btn" data-filter="viz">Visualization & BI</button>
+          <button class="filter-btn" data-filter="cloud">Cloud & Databases</button>
+          <button class="filter-btn" data-filter="web">Web & Software Dev</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+          <!-- Card 1: ML & GenAI -->
+          <div class="skill-category-card" data-category="ml">
+            <div class="category-header">
+              <div class="category-icon cat-icon-ml">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 4a6 6 0 0 0-6 6c0 3.314 2.686 6 6 6s6-2.686 6-6a6 6 0 0 0-6-6z"></path></svg>
+              </div>
+              <h3 class="category-name">Machine Learning & GenAI</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Python <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">Scikit-learn <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">XGBoost <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">LangChain <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">Agentic RAG <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">ChromaDB <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">Gemini 2.5 Flash <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">TensorFlow & Keras <span class="skill-level-badge level-foundational">Foundational</span></span>
+              <span class="skill-chip">Model Evaluation <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+            </div>
+          </div>
+
+          <!-- Card 2: Data Wrangling & Stats -->
+          <div class="skill-category-card" data-category="data">
+            <div class="category-header">
+              <div class="category-icon cat-icon-data">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <h3 class="category-name">Data Wrangling & Stats</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Pandas <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">NumPy <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">Exploratory Data Analysis (EDA) <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">Feature Engineering <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">RFM Segmentation <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">Descriptive Statistics <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">Hypothesis Testing <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">Time Series Analysis <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+            </div>
+          </div>
+
+          <!-- Card 3: Visualization & BI -->
+          <div class="skill-category-card" data-category="viz">
+            <div class="category-header">
+              <div class="category-icon cat-icon-viz">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <h3 class="category-name">Visualization & BI</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Streamlit <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">Plotly <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">Seaborn <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">Matplotlib <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">Data Storytelling <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">KPI Dashboards <span class="skill-level-badge level-experienced">Experienced</span></span>
+            </div>
+          </div>
+
+          <!-- Card 4: Databases & Cloud -->
+          <div class="skill-category-card" data-category="cloud">
+            <div class="category-header">
+              <div class="category-icon cat-icon-cloud">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="category-name">Databases & Cloud</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">SQL <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">MySQL <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">PostgreSQL <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">AWS (S3, Glue, SageMaker) <span class="skill-level-badge level-foundational">Foundational</span></span>
+              <span class="skill-chip">Apache Spark (PySpark) <span class="skill-level-badge level-foundational">Foundational</span></span>
+              <span class="skill-chip">Google Cloud Platform <span class="skill-level-badge level-foundational">Foundational</span></span>
+            </div>
+          </div>
+
+          <!-- Card 5: Web & Software Dev -->
+          <div class="skill-category-card" data-category="web">
+            <div class="category-header">
+              <div class="category-icon cat-icon-web">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="category-name">Web & Software Dev</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">JavaScript (ES6+) <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">React.js <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">HTML5 & CSS3 <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">Git & GitHub <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">REST APIs <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">cPanel & Hosting <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">VS Code & Jupyter <span class="skill-level-badge level-experienced">Experienced</span></span>
+            </div>
+          </div>
+
+          <!-- Card 6: Professional Skills -->
+          <div class="skill-category-card" data-category="all">
+            <div class="category-header">
+              <div class="category-icon cat-icon-soft">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3 class="category-name">Core Strengths</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Problem Solving <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">Analytical Thinking <span class="skill-level-badge level-experienced">Experienced</span></span>
+              <span class="skill-chip">Data Storytelling <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">Cross-Functional Sprints <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+              <span class="skill-chip">Technical Writing <span class="skill-level-badge level-intermediate">Intermediate</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio Showcase</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Data Science & AI Projects</span></h2>
+          <p class="section-description">
+            Real-world applications spanning Machine Learning, Generative AI & RAG, Econometric Optimization, and Quantitative Analytics.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="projects-filter-nav">
+          <button class="filter-btn active" data-filter="all">All Projects (6)</button>
+          <button class="filter-btn" data-filter="genai">Generative AI & LLMs</button>
+          <button class="filter-btn" data-filter="ml">Machine Learning</button>
+          <button class="filter-btn" data-filter="analytics">Data Analytics</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1: UPI Transaction Amount Recommendation System -->
+          <article class="project-card" data-category="ml">
+            <div class="project-thumb-frame">
+              <img src="./assets/project-1.png" alt="UPI Recommendation System Screenshot" class="project-img" loading="lazy" />
+              <span class="project-category-badge">Machine Learning</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">UPI Transaction Recommendation System</h3>
+              <p class="project-summary">
+                ML-powered recommendation engine analyzing 10,000+ UPI user transaction histories to predict optimal payment amounts and segment spending patterns with 70% confidence.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">Python</span>
+                <span class="proj-tag">Scikit-learn</span>
+                <span class="proj-tag">Streamlit</span>
+                <span class="proj-tag">Clustering</span>
+              </div>
+              <div class="project-links">
+                <a href="https://trb9kbzvjqczjdgep2vrjj.streamlit.app/" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm">
+                  <span>Live Demo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/gunal-official/UPI-Transaction-Amount-Recommendation-System-Using-User-Transaction-Patterns" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+                <button class="btn btn-outline btn-sm project-details-btn" data-project="upi-recommender">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: AI-Powered Multi-PDF Document Assistant -->
+          <article class="project-card" data-category="genai">
+            <div class="project-thumb-frame">
+              <img src="./assets/project-rag.png" alt="AI Powered Document Assistant RAG Screenshot" class="project-img" loading="lazy" />
+              <span class="project-category-badge">Generative AI</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">AI Multi-PDF Document Assistant</h3>
+              <p class="project-summary">
+                Production RAG chatbot built with LangChain, Groq LLaMA 3, and Gemini embeddings. Features conversational memory, multi-PDF semantic ingestion, and precise section citations.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">LangChain</span>
+                <span class="proj-tag">RAG</span>
+                <span class="proj-tag">Groq LLaMA 3</span>
+                <span class="proj-tag">ChromaDB</span>
+              </div>
+              <div class="project-links">
+                <a href="https://ai-powered-document-assistant-chatbot.streamlit.app/" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm">
+                  <span>Live Demo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/gunal-official/AI-Powered-Document-Assistant" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+                <button class="btn btn-outline btn-sm project-details-btn" data-project="document-assistant">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Multimodal AI Assistant (VLM) -->
+          <article class="project-card" data-category="genai">
+            <div class="project-thumb-frame">
+              <img src="./assets/project-multimodal.png" alt="Multimodal AI Assistant VLM Interface" class="project-img" loading="lazy" />
+              <span class="project-category-badge">Vision AI</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Multimodal AI Vision Assistant</h3>
+              <p class="project-summary">
+                Vision-Language Model (VLM) application powered by Gemini 2.5 Flash via OpenRouter API. Supports image comprehension, OCR extraction, visual question answering, and dialogue reasoning.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">Gemini 2.5</span>
+                <span class="proj-tag">VLM</span>
+                <span class="proj-tag">OpenRouter</span>
+                <span class="proj-tag">Computer Vision</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/gunal-official/multimodal-ai-assistant" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm">View Repository</a>
+                <button class="btn btn-outline btn-sm project-details-btn" data-project="multimodal-ai">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Dynamic Pricing Strategy Engine -->
+          <article class="project-card" data-category="ml">
+            <div class="project-thumb-frame">
+              <img src="./assets/project-pricing.png" alt="Dynamic Pricing Dashboard" class="project-img" loading="lazy" />
+              <span class="project-category-badge">Machine Learning</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Dynamic Pricing Strategy Engine</h3>
+              <p class="project-summary">
+                Predictive econometric pricing model utilizing XGBoost regression to estimate demand elasticity, benchmark competitor price shifts, and simulate A/B revenue optimizations across 4,800+ SKUs.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">XGBoost</span>
+                <span class="proj-tag">Elasticity</span>
+                <span class="proj-tag">A/B Testing</span>
+                <span class="proj-tag">Economics</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/gunal-official" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm">View Code</a>
+                <button class="btn btn-outline btn-sm project-details-btn" data-project="dynamic-pricing">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Financial Data Analysis & Market Intelligence -->
+          <article class="project-card" data-category="analytics">
+            <div class="project-thumb-frame">
+              <img src="./assets/project-financial.png" alt="Financial Data Analysis Dashboard" class="project-img" loading="lazy" />
+              <span class="project-category-badge">Quantitative Finance</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Financial Market Intelligence Dashboard</h3>
+              <p class="project-summary">
+                Large-scale financial time series analytics computing RSI, MACD, moving averages, and Sharpe ratios. Features interactive Plotly visualizations for equity portfolio risk-return profiling.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">Plotly</span>
+                <span class="proj-tag">Time Series</span>
+                <span class="proj-tag">Pandas</span>
+                <span class="proj-tag">Streamlit</span>
+              </div>
+              <div class="project-links">
+                <a href="https://financial-data-analysis-with-python-k7csmfubwkkyhvxcldzkdt.streamlit.app/" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm">
+                  <span>Live Demo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/gunal-official/financial-data-analysis-with-python" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+                <button class="btn btn-outline btn-sm project-details-btn" data-project="financial-analysis">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Customer Lifetime Value (CLV) & Churn Predictor -->
+          <article class="project-card" data-category="analytics">
+            <div class="project-thumb-frame">
+              <img src="./assets/project-clv.png" alt="Customer Lifetime Value Analysis Dashboard" class="project-img" loading="lazy" />
+              <span class="project-category-badge">Data Analytics</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Customer Lifetime Value (CLV) Predictor</h3>
+              <p class="project-summary">
+                Customer behavioral analytics platform evaluating 48,000+ transactional profiles with RFM modeling. Forecasts 90-day CLV and churn probabilities to optimize marketing retention ROI.
+              </p>
+              <div class="project-tags">
+                <span class="proj-tag">RFM Modeling</span>
+                <span class="proj-tag">Scikit-learn</span>
+                <span class="proj-tag">Cohort Analysis</span>
+                <span class="proj-tag">Streamlit</span>
+              </div>
+              <div class="project-links">
+                <a href="https://customer-lifetime-value-analysis-j4euuttoegcb7efz5dguss.streamlit.app/" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm">
+                  <span>Live Demo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/gunal-official/customer-lifetime-value-analysis" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+                <button class="btn btn-outline btn-sm project-details-btn" data-project="clv-analysis">Details</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Verified Credentials</span>
+          <h2 class="section-title">Industry <span class="gradient-text">Certifications & Specializations</span></h2>
+          <p class="section-description">
+            Recognized professional credentials from global leaders in Data Science, Machine Learning, and Cloud AI.
+          </p>
+        </div>
+
+        <div class="certs-grid">
+          <!-- Cert 1: IBM Data Science -->
+          <div class="cert-card">
+            <div class="cert-badge-header">
+              <div class="cert-org-icon cert-ibm">IBM</div>
+              <span class="cert-courses-count">12-Course Series</span>
+            </div>
+            <h3 class="cert-title">IBM Data Science Professional Certificate</h3>
+            <div class="cert-issuer">IBM • Coursera Verified</div>
+            <p class="cert-topics">
+              Comprehensive mastery of Python for Data Science, SQL Databases, Data Analysis, Machine Learning Algorithms, and Applied Capstone Project.
+            </p>
+          </div>
+
+          <!-- Cert 2: Google Data Analytics -->
+          <div class="cert-card">
+            <div class="cert-badge-header">
+              <div class="cert-org-icon cert-google">Google</div>
+              <span class="cert-courses-count">8-Course Series</span>
+            </div>
+            <h3 class="cert-title">Google Data Analytics Professional Certificate</h3>
+            <div class="cert-issuer">Google • Coursera Verified</div>
+            <p class="cert-topics">
+              Data cleaning rigor, exploratory data analysis, relational SQL, Tableau data visualization, and end-to-end analytical problem solving.
+            </p>
+          </div>
+
+          <!-- Cert 3: IBM Generative AI -->
+          <div class="cert-card">
+            <div class="cert-badge-header">
+              <div class="cert-org-icon cert-ibm">IBM</div>
+              <span class="cert-courses-count">3-Course Series</span>
+            </div>
+            <h3 class="cert-title">Generative AI for Data Scientists Specialization</h3>
+            <div class="cert-issuer">IBM • Coursera Verified</div>
+            <p class="cert-topics">
+              Foundation LLM architectures, prompt engineering patterns, Retrieval-Augmented Generation (RAG) frameworks, and AI application lifecycle.
+            </p>
+          </div>
+
+          <!-- Cert 4: AWS Machine Learning -->
+          <div class="cert-card">
+            <div class="cert-badge-header">
+              <div class="cert-org-icon cert-aws">AWS</div>
+              <span class="cert-courses-count">Cloud AI Verified</span>
+            </div>
+            <h3 class="cert-title">Fundamentals of Machine Learning & AI</h3>
+            <div class="cert-issuer">Amazon Web Services (AWS)</div>
+            <p class="cert-topics">
+              Cloud machine learning pipelines, Amazon SageMaker, Computer Vision and NLP fundamentals, model deployment and monitoring.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch <span class="gradient-text">With Gunal</span></h2>
+          <p class="section-description">
+            Looking for a Data Scientist, Machine Learning Engineer, or AI developer? Feel free to reach out directly or send a message.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Column -->
+          <div class="contact-info-column">
+            <!-- Email Card -->
+            <div class="contact-card">
+              <div class="contact-card-main">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-label">Email Address</div>
+                  <a href="mailto:gunalofficialid@gmail.com" class="contact-value">gunalofficialid@gmail.com</a>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="gunalofficialid@gmail.com">Copy</button>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-card">
+              <div class="contact-card-main">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-label">Phone & WhatsApp</div>
+                  <a href="tel:+918111044810" class="contact-value">(+91) 8111044810</a>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="+918111044810">Copy</button>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-card">
+              <div class="contact-card-main">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-label">Location</div>
+                  <div class="contact-value">Bangalore, Karnataka, India</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- LinkedIn & GitHub Cards -->
+            <div class="contact-card">
+              <div class="contact-card-main">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <div>
+                  <div class="contact-label">LinkedIn</div>
+                  <a href="https://www.linkedin.com/in/gunal-d/" target="_blank" rel="noreferrer" class="contact-value">linkedin.com/in/gunal-d</a>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/in/gunal-d/" target="_blank" rel="noreferrer" class="copy-btn">Visit ↗</a>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-main">
+                <div class="contact-icon-box">
+                  <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </div>
+                <div>
+                  <div class="contact-label">GitHub</div>
+                  <a href="https://github.com/gunal-official" target="_blank" rel="noreferrer" class="contact-value">github.com/gunal-official</a>
+                </div>
+              </div>
+              <a href="https://github.com/gunal-official" target="_blank" rel="noreferrer" class="copy-btn">Visit ↗</a>
+            </div>
+          </div>
+
+          <!-- Message Form Column -->
+          <div class="contact-form-container">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name *</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Johnson" required />
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address *</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. alex@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="e.g. Machine Learning Opportunity / Project Collaboration" />
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message *</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Hi Gunal, I'd like to talk about..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
               </button>
-            </a>
-            <a href="https://trb9kbzvjqczjdgep2vrjj.streamlit.app/" target="_blank">
-              <button class="btn btn-color-2 project-btn">
-                Live Demo
-              </button></a>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Project One</h2>
-          <div class="btn-container">
-            <a href="https://github.com/gunal-official/UPI-Transaction-Amount-Recommendation-System-Using-User-Transaction-Patterns"
-              target="_blank">
-              <button class="btn btn-color-2 project-btn">
-                Github
-              </button>
-            </a>
-            <a href="https://trb9kbzvjqczjdgep2vrjj.streamlit.app/" target="_blank">
-              <button class="btn btn-color-2 project-btn">
-                Live Demo
-              </button></a>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Project One</h2>
-          <div class="btn-container">
-            <a href="https://github.com/gunal-official/UPI-Transaction-Amount-Recommendation-System-Using-User-Transaction-Patterns"
-              target="_blank">
-              <button class="btn btn-color-2 project-btn">
-                Github
-              </button>
-            </a>
-            <a href="https://trb9kbzvjqczjdgep2vrjj.streamlit.app/" target="_blank">
-              <button class="btn btn-color-2 project-btn">
-                Live Demo
-              </button></a>
+            </form>
           </div>
         </div>
       </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <div class="footer-brand">Gunal D</div>
+        <div class="footer-copy">© 2026 Gunal D. Engineered with focus on performance, accessibility & elegance.</div>
+      </div>
+
+      <ul class="footer-nav">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Journey</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="./assets/gunal-cv.pdf" target="_blank">Resume PDF</a></li>
+      </ul>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-  </section>
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:gunalofficialid@gmail.com">gunalofficialid@gmail.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/gunal-d/">LinkedIn</a></p>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <p>Copyright &#169; 2025 Gunal D. All Rights Reserved.</p>
   </footer>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top of page" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-image-frame">
+        <img id="modal-image" src="" alt="Project screenshot preview" class="modal-image" />
+      </div>
+
+      <div class="modal-body">
+        <h3 id="modal-title" class="modal-title">Project Title</h3>
+        <div id="modal-subtitle" class="modal-subtitle">Category | Tech Stack</div>
+        <p id="modal-desc" class="modal-desc">Project comprehensive description goes here.</p>
+        
+        <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text-primary);">Key Architectural Highlights:</h4>
+        <ul id="modal-highlights" class="modal-highlights">
+          <!-- Populated by script.js -->
+        </ul>
+
+        <div id="modal-actions" class="modal-actions">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
 </body>
 

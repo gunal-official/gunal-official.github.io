@@ -1,0 +1,305 @@
+/* ==========================================================================
+   MEDIA QUERIES & RESPONSIVE BEHAVIOR
+   Mobile-first & adaptive breakpoints for Gunal D Portfolio
+   ========================================================================== */
+
+/* --- LARGE DESKTOP & MONITORS (Min 1400px) --- */
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .hero-name {
+    font-size: 4.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- LAPTOPS & DESKTOPS (Max 1200px) --- */
+@media screen and (max-width: 1200px) {
+  .hero-grid {
+    gap: 2.5rem;
+  }
+
+  .avatar-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .avatar-halo {
+    width: 310px;
+    height: 310px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- TABLETS & SMALL LAPTOPS (Max 992px) --- */
+@media screen and (max-width: 992px) {
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  /* Hero Column Re-arrangement */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-greeting,
+  .hero-role-wrapper {
+    justify-content: center;
+  }
+
+  .hero-bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .social-strip {
+    justify-content: center;
+  }
+
+  .hero-visual-wrapper {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .avatar-container {
+    width: 260px;
+    height: 260px;
+  }
+
+  .avatar-halo {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-stats-banner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  /* About Grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-image-card {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  /* Contact Grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* --- MOBILE DEVICES (Max 768px) --- */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  /* Navigation */
+  .desktop-nav,
+  .nav-cta-btn {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .brand-logo {
+    font-size: 1.15rem;
+  }
+
+  .logo-badge {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.85rem;
+  }
+
+  /* Hero adjustments */
+  .hero-section {
+    padding-top: 6.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-role-wrapper {
+    font-size: 1.25rem;
+  }
+
+  .hero-stats-banner {
+    grid-template-columns: 1fr 1fr;
+    padding: 1.25rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .floating-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .badge-top {
+    left: -5px;
+    top: 0;
+  }
+
+  .badge-bottom {
+    right: -5px;
+    bottom: 5px;
+  }
+
+  /* About Pillars */
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-tag-card {
+    right: 10px;
+    bottom: -15px;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Timeline */
+  .timeline-container::before {
+    left: 12px;
+  }
+
+  .timeline-item {
+    padding-left: 36px;
+  }
+
+  .timeline-bullet {
+    left: 4px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-card {
+    padding: 1.25rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-links .btn {
+    width: 100%;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Certifications */
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .contact-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .copy-btn {
+    align-self: flex-end;
+  }
+
+  .contact-form-container {
+    padding: 1.5rem 1.25rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* --- SMALL MOBILE PHONES (Max 480px) --- */
+@media screen and (max-width: 480px) {
+  .hero-name {
+    font-size: 2.15rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .hero-stats-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.75rem;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .skills-filter-nav,
+  .projects-filter-nav {
+    gap: 0.4rem;
+  }
+
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.85rem;
+  }
+}
